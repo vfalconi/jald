@@ -1,0 +1,45 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "start:debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "live:serve": "npx @11ty/eleventy && http-server -p 80 /app/build",
+    "build": "npx @11ty/eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:nodemon": "nodemon ./t.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vfalconi@github.com/vfalconi/dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vfalconi/dashboard/issues"
+  },
+  "homepage": "https://github.com/vfalconi/dashboard#readme",
+  "dependencies": {
+    "@mdi/js": "^7.0.96",
+    "camel-case": "^4.1.2",
+    "dotenv": "^16.0.3",
+    "eleventy-sass": "^2.2.1",
+    "kdljs": "^0.1.5",
+    "nunjucks-tag-spaceless": "^1.0.0",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./t.js",
+      "dashboards",
+      "eleventy-config"
+    ],
+    "ext": "js,json,kdl"
+  }
+}

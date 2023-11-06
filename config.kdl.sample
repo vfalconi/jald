@@ -1,0 +1,5 @@
+appConfig {
+	dashboardTitle "Your great dashboard title"
+	dashboardImage "/path/to/a/fun/little/image.whatever"
+	hideList true
+}

@@ -1,0 +1,32 @@
+---
+title: My page title
+pagination:
+  data: collections.dashboards
+  size: 1
+  alias: dashboard
+  addAllPagesToCollections: true
+permalink: '{{ dashboard.name }}'
+---
+{% import 'macros.html' as ui %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ dashboard.properties.title }} | JALD </title>
+	<link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+	{% include 'dashboard-header/index.html' %}
+	<div class="dashboard-app-wrapper">
+		<main class="dashboard">
+			{% for panel in dashboard.children %}
+				{% if panel.name == 'links' %}
+					{{ ui.links(panel) }}
+				{% endif %}
+			{% endfor %}
+		</main>
+	</div>
+</body>
+</html>

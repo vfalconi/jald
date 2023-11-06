@@ -1,0 +1,24 @@
+.dashboard-app-wrapper {
+	container-name: appWrapper;
+	container-type: inline-size;
+	padding: calc(var(--gap) * 2);
+}
+
+.dashboard {
+	display: grid;
+	grid-template-columns: repeat(var(--appColumnCount, 1), 1fr);
+	gap: calc(var(--gap) * 2);
+	margin-top: var(--navHeight);
+}
+
+@container appWrapper (width > 50rem) {
+	.dashboard {
+		--appColumnCount: 2;
+	}
+}
+
+@container appWrapper (width > 75rem) {
+	.dashboard {
+		--appColumnCount: 3;
+	}
+}

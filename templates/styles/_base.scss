@@ -1,0 +1,20 @@
+:root {
+	--gap: 1rem;
+	--navHeight: 64px;
+	font-size: 16px;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: system-ui;
+	background-color: #111;
+}
+
+main {
+	position: relative;
+}

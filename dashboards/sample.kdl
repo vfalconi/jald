@@ -1,0 +1,33 @@
+config title="Your dashboard's title"
+
+links heading="Network" icon="lan-connect" {
+	"Router" icon="router-wireless" href="..."
+}
+
+links heading="Dev" icon="code-braces" {
+	"Git" icon="git" href="..."
+	"Jenkins" icon="sync-circle" href="..."
+	"GitHub" icon="github" href="..."
+	"AWS" icon="aws" href="..."
+}
+
+links heading="Social" icon="graph" {
+	"hachyderm.io" icon="mastodon" href="..."
+	"Your blog" icon="typewriter" href="..."
+}
+
+links heading="Home" icon="home-variant" {
+	"NWS" icon="weather-partly-snowy-rainy" href="..."
+	"Precipitation map" icon="water" href="..."
+	"WUnderground" icon="weather-lightning-rainy" href="..."
+}
+
+links heading="Media" icon="video-vintage" {
+	"YouTube" icon="movie-open" href="..."
+	"twitch.tv" icon="twitch" href="..."
+}
+
+links heading="Gaming" icon="chess-pawn" {
+	"D&D Beyond" icon="dice-d20" href="..."
+	"Roll20" icon="sword" href="..."
+}

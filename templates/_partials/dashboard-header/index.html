@@ -1,0 +1,24 @@
+<div class="dashboard-header">
+	{% if (dashboardImage is defined and dashboardImage != '') or (dashboardTitle is defined and dashboardTitle != '') %}
+		<div class="dashboard-header__title">
+			{% if dashboardImage is defined and dashboardImage != '' %}
+				<div class="dashboard-header__image-wrapper">
+					<img src="{{ dashboardImage }}" class="dashboard-header__image" width="48" height="48" alt="" />
+				</div>
+			{% endif %}
+			{% if dashboardTitle is defined and dashboardTitle != '' %}
+				<p>{{ dashboardTitle }}</p>
+			{% endif %}
+		</div>
+	{% endif %}
+
+	{% if collections.dashboards|length > 1 and hideList != true %}
+		<nav>
+			<ul class="dashboard-header__list">
+				{% for dashboard in collections.dashboards %}
+					<li><a class="dashboard-header__link" href="/{{ dashboard.name }}">{{ dashboard.properties.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	{% endif %}
+</div>

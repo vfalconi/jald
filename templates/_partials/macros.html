@@ -1,0 +1,22 @@
+{% macro links(block) %}
+	<nav class="links">
+		<div class="links__header">
+			<h2 class="links__heading">{{ block.properties.heading }}</h2>
+			<svg class="links__heading-icon" width="32" height="32" viewBox="0 0 24 24">
+				<path d="{{ block.properties.icon|icon }}" />
+			</svg>
+		</div>
+		<ul class="links__list">
+			{% for link in block.children %}
+				<li class="links__list-item">
+					<svg class="links__icon" width="32" height="32" viewBox="0 0 24 24">
+						<path d="{{ link.properties.icon|icon }}" />
+					</svg>
+					<a class="links__link" href="{{ link.properties.href }}" target="_blank">
+						{{ link.name }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+{% endmacro %}
